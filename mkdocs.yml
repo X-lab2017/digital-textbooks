@@ -1,6 +1,5 @@
 site_name: 开源数字课本
-
-# site_url: https://wangyantong2000.github.io/blog/
+site_url: https://wangyantong2000.github.io/digital-textbooks/
 repo_name: digital-textbooks
 repo_url: https://github.com/X-lab2017/digital-textbooks
 edit_uri: tree/main/docs
