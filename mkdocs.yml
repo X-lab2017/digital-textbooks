@@ -5,7 +5,7 @@ repo_name: digital-textbooks
 repo_url: https://github.com/X-lab2017/digital-textbooks
 edit_uri: tree/main/docs
 # Copyright
-copyright: Copyright &copy; 2022-2024 krahets<br>The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+copyright: Copyright &copy; 2024 X-lab<br>The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
 
 # Configuration
 theme:
@@ -98,26 +98,26 @@ extra:
       link: /
       lang: zh
   generator: false
-  analytics:
-    provider: google #谷歌分析
+  # analytics:
+  #   provider: google #谷歌分析
 
-    property:
+  #   property:
 
-    # 网页底部反馈
-    feedback:
-      title: 此页面有帮助吗？
-      ratings:
-        - icon: material/thumb-up-outline #图标可自定义
-          name: This page was helpful
-          data: 1
-          note: >-
-            谢谢你的反馈！
-        - icon: material/thumb-down-outline
-          name: This page could be improved
-          data: 0
-          note: >-
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+  #   # 网页底部反馈
+  #   feedback:
+  #     title: 此页面有帮助吗？
+  #     ratings:
+  #       - icon: material/thumb-up-outline #图标可自定义
+  #         name: This page was helpful
+  #         data: 1
+  #         note: >-
+  #           谢谢你的反馈！
+  #       - icon: material/thumb-down-outline
+  #         name: This page could be improved
+  #         data: 0
+  #         note: >-
+  #           Thanks for your feedback! Help us improve this page by
+  #           using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/X-lab2017
@@ -152,6 +152,8 @@ nav:
       - 实践项目:
           - 实践项目: textbooks/chapter_practice/index.md
   - 标签: tag.md
+  - 日志:
+      - index: blog/index.md
 plugins:
   - glightbox
   # - search:
@@ -173,3 +175,15 @@ plugins:
         - tag.md
   - tags:
       tags_file: tag.md #分类标签
+  - blog: #博客配置
+      post_date_format: full #时间
+      draft: true
+      draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
+      post_readtime: true
+      post_readtime_words_per_minute: 265 #计算帖子的阅读时间时读者每分钟预计阅读的字数
+      post_url_format: "{date}/{slug}"
+      # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #   kwds:
+      #     case: lower
+      pagination_url_format: "page/{page}"
+      authors_file: "{blog}/.authors.yml" #作者信息
