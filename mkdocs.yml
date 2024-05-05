@@ -1,1 +1,175 @@
-site_name: My Docs
+site_name: 开源数字课本
+
+# site_url: https://wangyantong2000.github.io/blog/
+repo_name: digital-textbooks
+repo_url: https://github.com/X-lab2017/digital-textbooks
+edit_uri: tree/main/docs
+# Copyright
+copyright: Copyright &copy; 2022-2024 krahets<br>The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+
+# Configuration
+theme:
+  name: material
+  favicon: assets/favicon.jpeg
+  custom_dir: docs/overrides
+  logo: assets/favicon.jpeg
+  language: zh
+  icon:
+    repo: fontawesome/brands/github #右上角图标
+  features:
+    - navigation.expand
+    - announce.dismiss
+    - content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - content.code.copy # 代码支持拷贝
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至深色模式
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换至浅色模式
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+extra:
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh
+  generator: false
+  analytics:
+    provider: google #谷歌分析
+
+    property:
+
+    # 网页底部反馈
+    feedback:
+      title: 此页面有帮助吗？
+      ratings:
+        - icon: material/thumb-up-outline #图标可自定义
+          name: This page was helpful
+          data: 1
+          note: >-
+            谢谢你的反馈！
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/X-lab2017
+
+    - icon: fontawesome/regular/envelope #联系方式图标
+      link: mailto:<wwang@dase.ecnu.edu.cn> #邮件联系方式
+  status:
+    new: 最近添加
+# generator: false
+nav:
+  - oss101数字课本:
+      - 第一讲 开源世界漫游:
+          - 第一讲 开源世界漫游: textbooks/chapter_1/index.md
+      - 第二讲 认识开源项目及多视角探索:
+          - 第二讲 认识开源项目及多视角探索: textbooks/chapter_2/index.md
+      - 第三讲 软件产业与开源软件商业化:
+          - 第三讲 软件产业与开源软件商业化: textbooks/chapter_3/index.md
+      - 第四讲 全球开源软件生态发展:
+          - 第四讲 全球开源软件生态发展: textbooks/chapter_4/index.md
+      - 第五讲 软件工程与数据科学视角看开源:
+          - 第五讲 软件工程与数据科学视角看开源: textbooks/chapter_5/index.md
+      - 第六讲 开源协作与工程全流程:
+          - 第六讲 开源协作与工程全流程: textbooks/chapter_6/index.md
+      - 第七讲 个人开源贡献:
+          - 第七讲 个人开源贡献: textbooks/chapter_7/index.md
+      - 第八讲 团队开源协作:
+          - 第八讲 团队开源协作: textbooks/chapter_8/index.md
+      - 第九讲 DevOps 开源实践:
+          - 第九讲 DevOps 开源实践: textbooks/chapter_9/index.md
+      - 第十讲 深入洞察与参与开源社区:
+          - 第十讲 深入洞察与参与开源社区: textbooks/chapter_10/index.md
+      - 实践项目:
+          - 实践项目: textbooks/chapter_practice/index.md
+  - 标签: tag.md
+plugins:
+  - glightbox
+  # - search:
+  #     separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - search
+  - git-revision-date-localized: # 支持文档创建时间显示， https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+      locale: zh
+      enable_creation_date: true
+      type: date
+      exclude:
+        - index.md
+        - tag.md
+  - git-committers:
+      # enabled: !ENV [CI, false]
+      repository: X-lab2017/digital-textbooks
+      branch: main
+      exclude:
+        - index.md
+        - tag.md
+  - tags:
+      tags_file: tag.md #分类标签
